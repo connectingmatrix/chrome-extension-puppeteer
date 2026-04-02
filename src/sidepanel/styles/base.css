@@ -1,0 +1,26 @@
+:root { color: #1d2433; font-family: "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; background: linear-gradient(180deg, #eef3fb 0%, #f7f8fb 100%); }
+button, input, select { font: inherit; }
+.app-shell { min-height: 100vh; padding: 16px; }
+.toolbar, .compare-grid { display: grid; gap: 14px; }
+.toolbar { grid-template-columns: 1fr 1fr 1.2fr auto auto; margin-bottom: 14px; }
+.control, .stack { display: flex; flex-direction: column; gap: 8px; }
+.field, .btn { height: 40px; border-radius: 12px; border: 1px solid #c9d3e6; }
+.field { padding: 0 12px; background: rgba(255, 255, 255, 0.88); }
+.btn { padding: 0 14px; background: #1f4fd1; color: white; cursor: pointer; }
+.btn.subtle { background: rgba(255, 255, 255, 0.88); color: #1d2433; }
+.banner, .panel { background: rgba(255, 255, 255, 0.9); border: 1px solid #d8e0ee; border-radius: 18px; }
+.banner { padding: 12px 14px; margin-bottom: 14px; }
+.banner.error { background: #ffe6e4; border-color: #f3b6b0; }
+.compare-grid { grid-template-columns: 1fr 1fr; }
+.panel { padding: 14px; }
+.panel-head, .group-title { display: flex; justify-content: space-between; }
+.panel-head { margin-bottom: 12px; }
+.group-title { font-size: 12px; font-weight: 700; margin: 10px 0 8px; }
+.diff-grid { display: grid; gap: 8px; }
+.diff-row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-radius: 12px; background: #f4f6fb; }
+.diff-row.warn { background: #fff6be; }
+.diff-row.danger { background: #ffe0de; }
+.empty { color: #687185; }
+@media (max-width: 980px) { .toolbar, .compare-grid { grid-template-columns: 1fr; } }

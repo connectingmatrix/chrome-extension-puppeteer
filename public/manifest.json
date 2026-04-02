@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "DOM Twin Diff",
+  "version": "0.1.0",
+  "description": "Compare DOM structure, class names, and computed styles between two tabs.",
+  "permissions": ["tabs", "scripting", "sidePanel"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open DOM Twin Diff"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}
