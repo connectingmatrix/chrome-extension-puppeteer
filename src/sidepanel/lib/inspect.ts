@@ -1,6 +1,5 @@
 import { BrowserTab, NodeDetail, Snapshot } from '@/src/sidepanel/types';
 import { readDomSnapshot, readNodeDetail } from '@/src/sidepanel/lib/page-readers';
-import { trackedStyleNames } from '@/src/sidepanel/lib/style-diff';
 
 const canInspect = (url: string) => url.startsWith('http://') || url.startsWith('https://') || url.startsWith('file://');
 
@@ -20,4 +19,4 @@ export const inspectTree = async (tabId: number, selector: string): Promise<Snap
     runScript<Snapshot>(tabId, readDomSnapshot, [selector]);
 
 export const inspectNode = async (tabId: number, selector: string, path: string): Promise<NodeDetail> =>
-    runScript<NodeDetail>(tabId, readNodeDetail, [selector, path, trackedStyleNames]);
+    runScript<NodeDetail>(tabId, readNodeDetail, [selector, path]);
